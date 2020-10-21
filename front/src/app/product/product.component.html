@@ -1,0 +1,25 @@
+<section id="section">
+    <form [formGroup]="form">
+
+        <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" 
+            name="title" 
+            class="form-control" 
+            formControlName="title" 
+            id="title" 
+            placeholder="Enter Title"
+            >
+          </div>
+
+        <div class="form-group">
+            <label for="exampleFormControlFile1">Choose image</label>
+            <input type="file" 
+            class="form-control-file" 
+            id="exampleFormControlFile1"
+            name="file" (change)="fileChange($event)"
+            >
+          </div>
+        <button (click)="post()" class="btn btn-primary">Primary Button</button>
+    </form>
+</section>
